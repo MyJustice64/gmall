@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.mp4parser:isoparser:1.9.41">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../APP/APP/repository-spring/org/mp4parser/isoparser/1.9.41/isoparser-1.9.41.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../APP/APP/repository-spring/org/mp4parser/isoparser/1.9.41/isoparser-1.9.41-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../APP/APP/repository-spring/org/mp4parser/isoparser/1.9.41/isoparser-1.9.41-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

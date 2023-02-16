@@ -1,0 +1,7 @@
+# Project exclude paths
+/gmall-parent/common/common-util/target/
+/gmall-parent/common/service-util/target/
+/gmall-parent/model/target/
+/gmall-parent/server-gateway/target/
+/gmall-parent/service/service-product/target/
+/gmall-parent/ZY-wisdom/target/
