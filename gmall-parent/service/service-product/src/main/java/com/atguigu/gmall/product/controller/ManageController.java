@@ -2,6 +2,7 @@ package com.atguigu.gmall.product.controller;
 
 import com.atguigu.gmall.common.result.Result;
 import com.atguigu.gmall.model.product.BaseAttrInfo;
+import com.atguigu.gmall.model.product.SpuInfo;
 import com.atguigu.gmall.product.service.ManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping(value = "/admin/product")
-//@CrossOrigin//开启跨城访问,此方法每个服务都要加，不方便舍弃
 public class ManageController {
 
 
@@ -84,4 +84,47 @@ public class ManageController {
         return Result.ok(manageService.getBaseAttrValue(attrId));
     }
 
+    /**
+     * 查询品牌列表
+     * @return
+     */
+    @GetMapping(value = "/baseTrademark/getTrademarkList")
+    public Result getTrademarkList(){
+        return Result.ok(manageService.getBaseTrademark());
+    }
+
+    /**
+     * 查询所有的销售属性名称
+     * @return
+     */
+    @GetMapping(value = "/baseSaleAttrList")
+    public Result baseSaleAttrList(){
+        return Result.ok(manageService.getBaseSaleAttr());
+    }
+
+
+    /**
+     * 保存spu的信息
+     * @param spuInfo
+     * @return
+     */
+    @PostMapping(value = "/saveSpuInfo")
+    public Result saveSpuInfo(@RequestBody SpuInfo spuInfo){
+        manageService.saveSpuInfo(spuInfo);
+        return Result.ok();
+    }
+
+    /**
+     * 分页条件查询spu的信息
+     * @param page
+     * @param size
+     * @param category3Id
+     * @return
+     */
+    @GetMapping(value = "/{page}/{size}")
+    public Result getSpuInfo(@PathVariable(value = "page") Integer page,
+                             @PathVariable(value = "size") Integer size,
+                             Long category3Id){
+        return Result.ok(manageService.getSpuInfoList(page, size, category3Id));
+    }
 }
