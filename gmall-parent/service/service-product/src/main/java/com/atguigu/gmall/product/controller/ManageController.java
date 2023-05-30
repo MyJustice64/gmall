@@ -97,6 +97,7 @@ public class ManageController {
      * 查询所有的销售属性名称
      * @return
      */
+    
     @GetMapping(value = "/baseSaleAttrList")
     public Result baseSaleAttrList(){
         return Result.ok(manageService.getBaseSaleAttr());
